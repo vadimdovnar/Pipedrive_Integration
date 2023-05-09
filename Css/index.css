@@ -9,3 +9,12 @@ body {
     height: 80%;
     border: 1px solid black;
 }
+.items-block__item {
+    /* display: inline-block; */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+.items-block {
+    display: flex;
+}
