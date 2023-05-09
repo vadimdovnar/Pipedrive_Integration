@@ -1,20 +1,88 @@
-body {
+/*------------------------------------*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+	height: 100vh;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+    background-color: #F0F8FF;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*----------------------------------------------*/
+
+h2 {
+    color: 000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+}
+.item_one-line {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1vw;
 }
 .windows-wrapper {
-    width: 80%;
-    height: 80%;
-    border: 1px solid black;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 40px 20px;
 }
 .items-block__item {
-    /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
 }
 .items-block {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    
+}
+.items-block__submit {
+    display: block;
+    width: 35%;
+    margin: 0 auto;
 }
