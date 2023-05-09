@@ -1,9 +1,11 @@
-.windows-wrapper {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
-
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+.windows-wrapper {
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
 }
