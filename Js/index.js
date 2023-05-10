@@ -7,6 +7,8 @@ import  RestAPI from './RestAPI.js';
 const restAPI = new RestAPI();
 
 // add click event for the button
-const submitButton = document.querySelector('.items-block__submit');
-submitButton.addEventListener('click', restAPI.createDealWithPerson);
+const myForm = document.querySelector('#form');
+myForm.addEventListener('submit', restAPI.createDealWithPerson);
+
+  
 
