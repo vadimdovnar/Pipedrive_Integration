@@ -10,7 +10,7 @@
 <body>
     <div class="windows-wrapper">
         <div class="submit-form">
-            <form class="submit-form__items-block items-block">
+            <form id="form" class="submit-form__items-block items-block">
                 <div class="items-block__item item">
                     <h2>Client Details</h2>
                     <div class="item_one-line">
@@ -25,65 +25,95 @@
                         <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Email(optional)"><br><br>
+                        <input type="email" id="email" name="email" placeholder="Email (optional)"><br><br>
                     </div>
                 </div>
                 <div class="items-block__item item">
                     <h2>Job Details</h2>
                     <div class="item_one-line">
                         <div>
-                            <input type="text" id="fname" name="fname" placeholder="First name"><br>
+                            <!-- <label for="fruits">Choose a fruit:</label> -->
+                            <input type="text" id="jtype" name="jtype" list="fruit-list" placeholder="Job type">
+                            <datalist id="fruit-list">
+                            <option value="Apple">
+                            <option value="Banana">
+                            <option value="Cherry">
+                            <option value="Durian">
+                            <option value="Elderberry">
+                            </datalist>
                         </div>
                         <div>
-                            <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                            <!-- <label for="fruits">Choose a fruit:</label> -->
+                            <input type="text" id="jsource" name="jsource" list="fruit-list" placeholder="Job source">
+                            <datalist id="fruit-list">
+                            <option value="Apple">
+                            <option value="Banana">
+                            <option value="Cherry">
+                            <option value="Durian">
+                            <option value="Elderberry">
+                            </datalist>
                         </div>
                     </div>
                     <div>
-                        <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
+                        <textarea id="jdescription" name="jdescription" placeholder="Job description (optional)"></textarea>
+                    </div>
+                </div>
+                <div class="items-block__item item">
+                    <h2>Service location</h2>
+                    <div>
+                        <input type="text" id="address" name="address" placeholder="Address"><br>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Email(optional)"><br><br>
+                        <input type="text" id="city" name="city" placeholder="City"><br>
+                    </div>
+                    <div>
+                        <input type="text" id="state" name="state" placeholder="State"><br>
+                    </div>
+                    <div class="item_one-line">
+                        <div>
+                            <input type="text" id="zcode" name="zcode" placeholder="Zip code"><br>
+                        </div>
+                        <div>
+                            <input type="text" id="area" name="area" list="fruit-list" placeholder="Area">
+                            <datalist id="fruit-list">
+                                <option value="Apple">
+                                <option value="Banana">
+                                <option value="Cherry">
+                                <option value="Durian">
+                                <option value="Elderberry">
+                            </datalist>
+                        </div>
                     </div>
                 </div>
                 <div class="items-block__item item">
                     <h2>Scheduled</h2>
+                    <div>
+                        <input class="visible" type="date" id="date" name="date">
+                    </div>
                     <div class="item_one-line">
                         <div>
-                            <input type="text" id="fname" name="fname" placeholder="First name"><br>
+                            <input class="visible" type="time" id="stime" name="stime">
                         </div>
                         <div>
-                            <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                            <input class="visible" type="time" id="etime" name="etime">
                         </div>
                     </div>
                     <div>
-                        <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Email(optional)"><br><br>
+                        <input type="text" id="tselect" name="tselect" list="fruit-list" placeholder="Test select">
+                            <datalist id="fruit-list">
+                                <option value="Apple">
+                                <option value="Banana">
+                                <option value="Cherry">
+                                <option value="Durian">
+                                <option value="Elderberry">
+                            </datalist>
                     </div>
                 </div>
-                <div class="items-block__item item">
-                    <h2>Client Details</h2>
-                    <div class="item_one-line">
-                        <div>
-                            <input type="text" id="fname" name="fname" placeholder="First name"><br>
-                        </div>
-                        <div>
-                            <input type="text" id="lname" name="lname" placeholder="Last name"><br>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Email(optional)"><br><br>
-                    </div>
-                </div>
-                
-                <input class="items-block__submit" type="submit" value="Submit">
+                <input class="items-block__submit" type="submit" value="Create Deal">
             </form>
         </div>
-        <script src="Js/index.js"></script>
+        <script type="module" src="Js/RestAPI.js"></script>
+        <script type="module" src="Js/index.js"></script>
     </div>
 </body>
 </html>
