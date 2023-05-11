@@ -111,3 +111,15 @@ textarea {
 .items-block__submit {
     cursor: pointer;
 }
+.red {
+    border-color: #FA8072;
+}
+.show-success-status {
+    color: #32CD32;
+}
+.show-error-status {
+    color: #FA8072;
+}
+.hide {
+    display: none;
+}

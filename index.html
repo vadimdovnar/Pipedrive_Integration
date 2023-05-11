@@ -33,24 +33,25 @@
                     <div class="item_one-line">
                         <div>
                             <!-- <label for="fruits">Choose a fruit:</label> -->
-                            <input type="text" id="jtype" name="jtype" list="fruit-list" placeholder="Job type">
-                            <datalist id="fruit-list">
-                            <option value="Apple">
-                            <option value="Banana">
-                            <option value="Cherry">
-                            <option value="Durian">
-                            <option value="Elderberry">
+                            <input type="text" id="jtype" name="jtype" list="jtype-list" placeholder="Job type">
+                            <datalist id="jtype-list">
+                                <option value="repair of electrical equipment">
+                                <option value="car repair">
+                                <option value="scheduled maintenance of the heating system">
+                                <option value="cleaning">
+                                <option value="window installation">
                             </datalist>
                         </div>
                         <div>
                             <!-- <label for="fruits">Choose a fruit:</label> -->
-                            <input type="text" id="jsource" name="jsource" list="fruit-list" placeholder="Job source">
-                            <datalist id="fruit-list">
-                            <option value="Apple">
-                            <option value="Banana">
-                            <option value="Cherry">
-                            <option value="Durian">
-                            <option value="Elderberry">
+                            <input type="text" id="jsource" name="jsource" list="jsource-list" placeholder="Job source">
+                            <datalist id="jsource-list">
+                                <option value="GL Tampa">
+                                <option value="GL Miami">
+                                <option value="GL Orlando">
+                                <option value="GL Houston">
+                                <option value="GL Charlotte">
+                                <option value="GL Austin">
                             </datalist>
                         </div>
                     </div>
@@ -74,8 +75,8 @@
                             <input type="text" id="zcode" name="zcode" placeholder="Zip code"><br>
                         </div>
                         <div>
-                            <input type="text" id="area" name="area" list="fruit-list" placeholder="Area">
-                            <datalist id="fruit-list">
+                            <input type="text" id="area" name="area" list="area-list" placeholder="Area">
+                            <datalist id="area-list">
                                 <option value="Tampa">
                                 <option value="Miami">
                                 <option value="Orlando">
@@ -100,18 +101,19 @@
                         </div>
                     </div>
                     <div>
-                        <input type="text" id="tselect" name="tselect" list="fruit-list" placeholder="Test select">
-                            <datalist id="fruit-list">
-                                <option value="Apple">
-                                <option value="Banana">
-                                <option value="Cherry">
-                                <option value="Durian">
-                                <option value="Elderberry">
+                        <input type="text" id="tselect" name="tselect" list="tselect-list" placeholder="Test select">
+                            <datalist id="tselect-list">
+                                <option value="Test 1">
+                                <option value="Test 2">
+                                <option value="Test 3">
+                                <option value="Test 4">
+                                <option value="Test 5">
                             </datalist>
                     </div>
                 </div>
-                <input class="items-block__submit" type="submit" value="Create Deal">
+                <input class="items-block__submit" id="submit" type="submit" value="Create Deal">
             </form>
+            <p class="status hide"></p>
         </div>
         <script type="module" src="Js/RestAPI.js"></script>
         <script type="module" src="Js/index.js"></script>
