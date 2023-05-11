@@ -9,7 +9,7 @@ export default class RestAPI {
        // Validate each input field
       const elemList = document.querySelectorAll('input');
       for(let i = 0; i < elemList.length; i++) {
-        const requirement = elemList[i].getAttribute('id') !== 'email' || elemList[i].getAttribute('id') !== 'submit';
+        const requirement = elemList[i].getAttribute('id') !== 'email' && elemList[i].getAttribute('id') !== 'submit';
         if (requirement) {
           if(elemList[i].value.trim() === '') {
             count+= 1;
@@ -21,8 +21,10 @@ export default class RestAPI {
     }
     resetFormData() {
       const elemList = document.querySelectorAll('input');
+      const textaria = document.querySelector('#jdescription');
+      textaria.value = '';
       for(let i = 0; i < elemList.length; i++) {
-        const requirement = elemList[i].getAttribute('id') !== 'email' || elemList[i].getAttribute('id') !== 'submit';
+        const requirement = elemList[i].getAttribute('id') !== 'submit';
         if (requirement) {
           elemList[i].value = '';
           elemList[i].classList.remove('red');
@@ -32,14 +34,16 @@ export default class RestAPI {
     showSuccessStatus() {
       const elemList = document.querySelector('.status');
       elemList.classList.remove('hide');
-      elemList.innerHTML = 'new Deal and Person have been successfully created';
+      elemList.classList.remove('show-error-status');
       elemList.classList.add('show-success-status');
+      elemList.innerHTML = 'new Deal and Person have been successfully created';
     }
     showErrorStatus() {
       const elemList = document.querySelector('.status');
       elemList.classList.remove('hide');
-      elemList.innerHTML = 'ERROR : something went wrong!!!';
+      elemList.classList.add('show-success-status');
       elemList.classList.add('show-error-status');
+      elemList.innerHTML = 'ERROR : something went wrong!!!';
     }
     createDealWithPerson(event) {
         event.preventDefault();

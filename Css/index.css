@@ -101,7 +101,7 @@ textarea {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2vw;
-    
+    margin-bottom: 15px;
 }
 .items-block__submit {
     display: block;
